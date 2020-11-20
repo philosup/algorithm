@@ -8,10 +8,6 @@
             "type": "shell",
             "command": "cd ${fileDirname} && go build -o ${fileBasenameNoExtension}.out ${file} && ./${fileBasenameNoExtension}.out",
             "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
         },
         {
             "label": "compile",
@@ -23,7 +19,7 @@
             "label": "run",
             "type": "shell",
             "command": "cd ${fileDirname} && go run ${fileBasenameNoExtension}.go < ${file}",
-            "problemMatcher": [],
+            "problemMatcher": ["$go"],
             "group": {
                 "kind": "build",
                 "isDefault": true
